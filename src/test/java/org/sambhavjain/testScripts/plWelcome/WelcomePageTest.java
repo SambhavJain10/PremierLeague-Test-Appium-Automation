@@ -6,12 +6,15 @@ import org.testng.annotations.Test;
 
 public class WelcomePageTest extends BaseTest {
 
-    BaseWelcomePage baseWelcomePage=new BaseWelcomePage();
+    BaseWelcomePage baseWelcomePage=new BaseWelcomePage(driver);
 
     @Test
     public void asUserWouldLikeToVerifyWelcomeSection(){
-        baseWelcomePage.initialization(driver);
         baseWelcomePage.validateWelcomeTitle();
         baseWelcomePage.validateWelcomeDescription();
+    }
+    @Test
+    public void asUserWouldLikeToValidateGetStartedButton(){
+        baseWelcomePage.verifyAndClickOnGetStartedbutton(driver);
     }
 }

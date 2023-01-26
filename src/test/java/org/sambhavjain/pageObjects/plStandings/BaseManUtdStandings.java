@@ -1,6 +1,6 @@
 package org.sambhavjain.pageObjects.plStandings;
 
-public class BaseManUtdStandings {
+public class BaseManUtdStandings extends BaseStandingsElements {
 
 
 }
