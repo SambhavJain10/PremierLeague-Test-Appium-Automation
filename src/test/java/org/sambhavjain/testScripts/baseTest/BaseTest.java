@@ -45,7 +45,7 @@ public class BaseTest {
 
         // Set your access credentials
         caps.setCapability("browserstack.user", "sambhavjain_ORPqZ4");
-        caps.setCapability("browserstack.key", "QdzU9CdpqhsYVdPhgyoj");
+        caps.setCapability("browserstack.key", "######");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://e9bba8b4183e10576f191c50daac54bd615e5094");

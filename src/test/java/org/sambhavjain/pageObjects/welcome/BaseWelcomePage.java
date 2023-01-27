@@ -38,10 +38,6 @@ public class BaseWelcomePage extends AndroidActions {
     @AndroidFindBy  (id="com.pl.premierleague:id/login_button")
     private WebElement loginElement;
 
-    public void initialization(AndroidDriver driver){
-        PageFactory.initElements(driver, this)  ;
-
-    }
     public void validateWelcomeTitle(){
 
         Assert.assertEquals(welcomeTitleElement.getText(), "Welcome!");

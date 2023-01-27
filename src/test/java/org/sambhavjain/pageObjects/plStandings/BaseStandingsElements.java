@@ -2,13 +2,12 @@ package org.sambhavjain.pageObjects.plStandings;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.sambhavjain.utils.Helper;
+import org.sambhavjain.utils.AndroidActions;
 import org.testng.Assert;
 
-public class BaseStandingsElements extends Helper {
+public class BaseStandingsElements extends AndroidActions {
 
     @FindBy (id="com.pl.premierleague:id/logo")
     public WebElement welcomeLogoElement;
@@ -28,6 +27,10 @@ public class BaseStandingsElements extends Helper {
 
     @FindBy  (id="com.pl.premierleague:id/login_button")
     public WebElement loginElement;
+
+    public BaseStandingsElements(AndroidDriver driver) {
+        super(driver);
+    }
 
     public void initialization(AndroidDriver driver){
         PageFactory.initElements(driver, this)  ;
